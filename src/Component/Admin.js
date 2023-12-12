@@ -122,37 +122,44 @@ const Admin = () => {
               />
             </div>
 
+
             <div className="flex justify-between items-center mb-6">
               <button
                 onClick={handleStateButtonClick}
-                className="bg-orange-500 hover:bg-orange-700 hover:text-black text-white font-bold py-2 px-4 rounded mr-2"
-              >
-                <Link to="/Weeks">  Fixed</Link>
-           
+                className="bg-orange-500 hover:bg-orange-700 hover:text-black text-white font-bold py-2 px-4 rounded mr-2"> 
+                <Link to="/Weeks"> Fixed </Link>
               </button>
-
               <button
-                onClick={handleVariableButtonClick}
-                className="bg-orange-500 hover:bg-orange-700 hover:text-black text-white font-bold py-2 px-4 rounded"
-              >
-                <Link to="Dates">   Variable </Link>
-             
+                    onClick={handleVariableButtonClick}
+                    className="bg-orange-500 hover:bg-orange-700 hover:text-black text-white font-bold py-2 px-4 rounded">
+                  <Link to="Dates"> Variable </Link>
               </button>
-            </div>
+              </div>
 
-            <hr className="my-6" />
-
-            <button
-              type="submit"
-              className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            >
-              Submit
-            </button>
-          </form>
+              <hr className="my-6" />
+              <button
+                type="submit"
+                className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" >
+                Submit
+              </button>
+              </form>
         )}
       </div>
     </div>
   );
 };
+export default Admin;              
+    
+            
+            
+      
 
-export default Admin;
+
+
+
+          
+
+         
+          
+
+        

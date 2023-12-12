@@ -37,32 +37,7 @@
   }
 } 
 
- /* button { 
-  margin: 10px;
-  font-size: 16px;
-  letter-spacing: 2px;
-  font-weight: 400;
-  color: #fff;
-  padding: 23px 50px;
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
-  border: 0px;
-  cursor: pointer;
-}
-.green {
-  background-color: rgb(6, 172, 0);
-}
-.red {
-  background-color: rgb(221, 52, 66);
-}
-.red:disabled {
-  background-color: rgb(193, 191, 191);
-  cursor: not-allowed;
-}
-.cart {
-  text-align: center;
-}  */
+
 
 /* Weeks.css */
 
@@ -151,26 +126,6 @@
   width: 500px;
 }
 
-/* .calendar-input {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
-  cursor: pointer;
-} */
-/* 
-input[type="text"] {
-  border: none;
-  outline: none;
-  flex: 1;
-  padding: 8px;
-} */
-
-/* .calendar-symbol {
-  margin-left: 8px;
-  font-size: 18px;
-} */
 
 .calendar-container {
   position: absolute;
@@ -221,9 +176,6 @@ input[type="text"] {
 .calendar-day.empty {
   visibility: hidden;
 }
-
-/* Add more styles as needed */
-/* DifferentCalendar.css */
 
 .different-calendar {
   font-family: Arial, sans-serif;
@@ -291,28 +243,26 @@ input[type="text"] {
   visibility: hidden;
 }
 
-/* ... (existing styles) */
 
 .calendar-day {
-  /* Your existing calendar day styles */
   border: 1px solid #ccc;
   padding: 5px;
   cursor: pointer;
 }
 
-.calendar-day.selected {
-  /* Styles for selected date */
-  background-color: rgb(13, 13, 253); /* Change this to the desired background color */
-  color: #fff; /* Change this to the desired text color */
-  font-weight: bold;
-}
-/* Existing CSS */
 
-/* Add a new class to style the selected start date */
-.calendar-day.selected-start {
-  /* Styles for selected date */
-  background-color: rgb(13, 13, 253); /* Change this to the desired background color */
-  color: #fff; /* Change this to the desired text color */
+.calendar-day.selected {
+  background-color: rgb(13, 13, 253); 
+  color: #fff; 
   font-weight: bold;
 }
+
+.calendar-day.selected-start {
+  background-color: rgb(13, 13, 253); 
+  color: #fff; 
+  font-weight: bold;
+}
+
+
+
 

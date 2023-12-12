@@ -9,13 +9,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 
 
 
@@ -48,6 +47,9 @@ code {
     @apply bg-[#ff8c00] text-[white] rounded cursor-pointer mt-2.5 px-4 py-2 border-[none];
   }
   
+
+
+  /* START DATE CALENDAR */
   .custom-calendar {
     @apply relative w-[500px];
     font-family: Arial, sans-serif;
@@ -76,6 +78,8 @@ code {
     @apply invisible;
   }
 
+
+  /* END DATE CALENDAR */
   .different-calendar {
     @apply relative w-[500px];
     font-family: Arial, sans-serif;

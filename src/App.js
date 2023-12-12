@@ -8,19 +8,20 @@ import Dates from './Component/Dates';
 const App = () => {
   return (
     <div className="App">
-         <BrowserRouter>
-        
-         <Routes>  <Route path="/" element={<Admin />} />
-
-          <Route path='Weeks' element={<Weeks/>}/>
-          <Route path='Dates' element={<Dates/>}/>
-          
-        </Routes>
-      
-         </BrowserRouter>
-  
-    </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Admin />} />
+            <Route path='Weeks' element={<Weeks/>}/>
+            <Route path='Dates' element={<Dates/>}/>
+            <Route path='Weeks' element={<Weeks/>}/>
+            <Route path='Dates' element={<Dates/>}/>
+          </Routes> 
+        </BrowserRouter>
+        </div>
   );
-};
+}; 
+export default App;        
+  
+   
 
-export default App;
+

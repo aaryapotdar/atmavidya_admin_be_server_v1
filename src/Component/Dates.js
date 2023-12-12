@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-
-
 const CalendarPage = () => {
   const monthNames = [
     "January",
@@ -27,9 +25,6 @@ const CalendarPage = () => {
     );
   };
 
-
-  
-
   const daysInWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const [selectedDates, setSelectedDates] = useState([]);
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -42,8 +37,7 @@ const CalendarPage = () => {
   };
 
   const generateCalendar = () => {
-    // const today = new Date();
-    const daysInMonth = getDaysInMonth(currentDate);
+  const daysInMonth = getDaysInMonth(currentDate);
     const firstDay = new Date(
       currentDate.getFullYear(),
       currentDate.getMonth(),
@@ -108,42 +102,34 @@ const CalendarPage = () => {
       for (let i = start + 1; i < end; i++) {
         range.push(i);
       }
-
-      setSelectedDates([...selectedDates, ...range]);
+   setSelectedDates([...selectedDates, ...range]);
     }
   };
 
+   
   const handlePrevMonth = () => {
     const today = new Date();
   if (  currentDate.getFullYear() > today.getFullYear() ||
-  (currentDate.getFullYear() === today.getFullYear() &&
-    currentDate.getMonth() > today.getMonth())
-) 
-{   
+     (currentDate.getFullYear() === today.getFullYear() &&
+     currentDate.getMonth() > today.getMonth())
+     ) 
+  {   
    const prevMonthDate = new Date(currentDate);
    prevMonthDate.setMonth(prevMonthDate.getMonth() - 1);
    setCurrentDate(prevMonthDate);
-
   }
-
- };
+};
 
   const handleNextMonth = () => {
     const nextMonthDate = new Date(currentDate);
     nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
     setCurrentDate(nextMonthDate);
   };
-
   const calendar = generateCalendar();
-
-   
   useEffect(() => {
     console.log("Selected Dates:", selectedDates);
   }, [selectedDates]);
 
-
-
-  
   return (
     <>
     <div className="App-Calendar">
@@ -192,8 +178,7 @@ const CalendarPage = () => {
             </div>
           ))}
           
-         
-        </div>
+          </div>
         <button style={{width:'150px', color:'blue'}} onClick={handleContinuousClick}>Add Dates</button>
         {selectedDates.length > 0 && (
           <div className="selected-dates">
@@ -214,3 +199,10 @@ const CalendarPage = () => {
 };
 
 export default CalendarPage;
+ 
+
+
+  
+ 
+         
+     
