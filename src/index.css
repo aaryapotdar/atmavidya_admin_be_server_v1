@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+.page-container {
+    @apply flex justify-center items-center h-screen;
+  }
+
+
+  .schedule-component {
+    @apply border w-6/12 mt-[-30%] justify-center shadow-[0_4px_8px_0_rgba(0,0,0,0.2),0_6px_20px_0_rgba(0,0,0,0.19)] m-5 p-2.5 rounded-[5px] border-solid border-black;
+   
+  }
+
+  .dropdown-container {
+    @apply flex flex-row;
+  }
+
+  .schedule-columns {
+    @apply flex flex-wrap flex-row mt-[3%] mx-[2%];
+  }
+    
+
+  .column {
+    @apply w-[calc(14.28%_-_10px)] border text-center bg-[wheat] border cursor-pointer m-[1%] p-2.5 border-solid border-black border-[#ccc];
+  }
+  .column.selected {
+    @apply bg-[#aaf] text-white font-[bold];
+  }
+  button {
+    @apply bg-[#ff8c00] text-[white] rounded cursor-pointer mt-2.5 px-4 py-2 border-[none];
+  }
+  
+  .custom-calendar {
+    @apply relative w-[500px];
+    font-family: Arial, sans-serif;
+  }
+
+  .calendar-container {
+    @apply absolute z-[100] bg-white border shadow-[0_2px_4px_rgba(0,0,0,0.1)] w-[200%] flex flex-col rounded-[5px] border-solid border-[#ccc] left-0 top-[calc(100%_+_10px)];
+  }
+  .calendar-header {
+    @apply flex justify-between items-center p-2 border-b-[#ccc] border-b border-solid;
+  }
+  .calendar-header button {
+    @apply cursor-pointer text-sm border-[none];
+    background: none;
+  }
+  .calendar-header h2 {
+    @apply m-0;
+  }
+  .calendar-grid {
+    @apply grid grid-cols-[repeat(7,1fr)] gap-[5px] p-2;
+  }
+  .calendar-day {
+    @apply text-center border p-[5px] border-solid border-[#ccc];
+  }
+  .calendar-day.empty {
+    @apply invisible;
+  }
+
+  .different-calendar {
+    @apply relative w-[500px];
+    font-family: Arial, sans-serif;
+  }
+  .different-calendar-symbol {
+    @apply text-lg ml-2;
+  }
+  .different-calendar-container {
+    @apply absolute z-[100] bg-white border shadow-[0_2px_4px_rgba(0,0,0,0.1)] w-[200%] flex flex-col rounded-[5px] border-solid border-[#ccc] left-0 top-[calc(100%_+_10px)];
+  }
+  .different-calendar-header {
+    @apply flex justify-between items-center p-2 border-b-[#ccc] border-b border-solid;
+  }
+  .different-calendar-header button {
+    @apply text-[#ff8c00] cursor-pointer text-sm border-[none];
+    background: none;
+  }
+  .different-calendar-header h2 {
+    @apply text-[#ff8c00] m-0;
+  }
+  .different-calendar-grid {
+    @apply grid grid-cols-[repeat(7,1fr)] gap-[5px] p-2;
+  }
+  .different-calendar-day {
+    @apply text-center border font-[bold] p-[5px] border-solid border-[#ccc];
+  }
+  .different-calendar-day.empty {
+    @apply invisible;
+  }
+
+  .calendar-day{
+    @apply border 
+  }
+  
+  .calendar-day.selected {
+    @apply bg-[rgb(13,13,253)] text-white font-[bold];
+  }
+
+  .calendar-day.selected-start {
+    @apply bg-[rgb(13,13,253)] text-white font-[bold];
+  }
+
+
+
+
+
+  /* variable */
+  .calendar-containerdates {
+    @apply w-1/5 text-[#000000] shadow-[0_12px_24px_rgba(0,0,0,0.2)] text-center ml-[4%] my-[10%] rounded-[10px];
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .calendar {
+    @apply max-w-[400px] border shadow-[0_2px_4px_rgba(0,0,0,0.1)] bg-white text-center mx-auto my-0 p-[5px] rounded-[40px] border-solid border-[#ccc];
+  }
+  .calendar-header2 {
+    @apply flex justify-between items-center mb-2.5;
+  }
+  .calendar-header2 button {
+    @apply text-xl cursor-pointer text-[orange] border-[none];
+    background: none;
+  }
+  .calendar-header2 h2 {
+    @apply text-xl text-[orange] m-0;
+  }
+  .calendar-days {
+    @apply flex flex-row justify-between bg-[#ecb25a] p-2.5 rounded-[10px] text-black;
+  }
+  .calendar-day2 {
+    @apply flex-1 text-center font-[bold];
+  }
+  .calendar-grid2 {
+    @apply grid grid-cols-[repeat(7)] flex-col gap-[5px] mt-[5%] ;
+  }
+  .calendar-row {
+    @apply flex flex-row justify-between items-center;
+  }
+  .calendar-cell {
+    @apply flex-1 cursor-pointer p-2.5 rounded-[60px] ;
+  }
+  .calendar-date:hover {
+    @apply bg-[rgba(0,0,255,0.72)] text-[white];
+  }
+  .selected {
+    @apply bg-[blue] text-[white];
+  }
+  .calendar-empty {
+    @apply invisible;
+  }
+  .active-date {
+    @apply bg-[orange] text-white;
+  }
+  .past-date {
+    @apply text-[grey];
+  }
+  
+
+
+ 
